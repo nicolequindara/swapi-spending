@@ -19,3 +19,8 @@ class Client:
         response = requests.get(self._make_url(self.resource, id))
         response.raise_for_status()
         return response.json()
+    
+    def list(self):
+        response = requests.get(self._make_url(self.resource))
+        response.raise_for_status()
+        return response.json()

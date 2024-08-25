@@ -1,0 +1,74 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  background-color:#e3007d;
+  color:white;
+  margin-bottom:20px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size:larger;
+}
+
+.chart-title {
+  display: flex;
+  flex-direction: column;
+  width:75vw;
+  text-align: left;
+}
+
+
+h5 {
+  font-weight: normal;
+}
+
+.source {
+  display:flex;
+  flex-direction: column;
+  color:dimgrey;
+  font-size: small;
+  margin-top:20px;
+}
+
+.context-modal {
+  height:75vh;
+  width:75vw;
+  margin:calc(25vh/2);
+  display:block;
+  padding:20px;
+  display:flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.starship-cost-table > td {
+  width: 50%;
+}
+
+.table-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}

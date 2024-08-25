@@ -5,6 +5,16 @@ from fastapi import FastAPI
 app = FastAPI()
 swapi_client = SwapiClient()
 
+@app.get("/films/")
+def get_films():
+    """ See https://swapi.tech/documentation#films
+        Gets Star Wars films
+
+    Returns:
+        Films
+    """
+    return swapi_client.films.list()
+
 @app.get("/films/{id}")
 def get_film(id: int):
     """ See https://swapi.tech/documentation#films
