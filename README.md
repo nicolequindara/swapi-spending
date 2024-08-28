@@ -2,21 +2,17 @@
 This repository features a simple [FastAPI](https://fastapi.tiangolo.com/) wrapper around [SWAPI](https://swapi.dev/) and a React application created from [create-react-app](https://create-react-app.dev/) and [Material UI](https://mui.com/material-ui) components.
 
 ## Running locally
+```
+docker-compose up --build
+```
 # API
-```
-cd api
-poetry install # install dependencies
-fastapi dev main.py # run server, swagger docs at http://127.0.0.1:8000/docs
-```
+swagger docs at http://127.0.0.1:8000/docs
 ![Pie Chart](./screenshots/fastapi.png)
 
 
 # UI
-```
-cd ui
-npm run build # build package
-npm run start # run application on localhost:3000
-```
+application run at localhost:3000
+
 ![Main Page](./screenshots/main.png)
 Click a data point to see more
 ![Pie Chart](./screenshots/piechart.png)

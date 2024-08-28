@@ -1,0 +1,39 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PoetryPackageVersionsInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="4">
+            <item index="0" class="java.lang.String" itemvalue="vault-core" />
+            <item index="1" class="java.lang.String" itemvalue="vault-clinical-notes" />
+            <item index="2" class="java.lang.String" itemvalue="vault-care-collaboration" />
+            <item index="3" class="java.lang.String" itemvalue="cursor-pagination" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+          <option value="N803" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="internal_apps.clinical_portal.types.DiagnosisLinkedCPTCode" />
+          <option value="revenue_cycle_management.services.services.EligibilityService" />
+          <option value="revenue_cycle_management.vendors.apero.sdk.clients.invoices.InvoicesQueryParams" />
+          <option value="revenue_cycle_management.services.coverage.estimate_service.RCMMemberRepository" />
+          <option value="revenue_cycle_management.services.audit.claim_audit_service.claim_snapshot" />
+          <option value="revenue_cycle_management.admin.core.format_html" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

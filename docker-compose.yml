@@ -1,0 +1,27 @@
+name: swapi-spending
+services:
+  ui:
+    container_name: swapi-spending-ui
+    build:
+      context: .
+      dockerfile: ./ui/Dockerfile
+    volumes:
+      - ./:/ui
+      - /ui/node_modules
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    depends_on:
+      - api
+    command: npm start
+  api:
+    container_name: swapi-spending-api
+    build:
+      context: .
+      dockerfile: ./api/Dockerfile
+    volumes:
+      - ./:/app
+      - /app/.venv
+    ports:
+      - "8000:8000"
+    command: fastapi run api/main.py
