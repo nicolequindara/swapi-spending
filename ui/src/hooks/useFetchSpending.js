@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
+import { formatStringToInt } from "../utils";
 
 const cleanUrl = (url, resource) => url.replace(`https://swapi.dev/api/${resource}/`,"").replace("/", "")
+
+
 
 const useFetchSpending = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [apiData, setApiData] = useState({films: [], starships: []});
     const [serverError, setServerError] = useState(null);
 
-  
     useEffect(() => {
       setIsLoading(true);
 
@@ -21,7 +23,7 @@ const useFetchSpending = () => {
           .then((response) => response.json())
           .then((data) => {
             const name = data.name
-            const cost = isNaN(data.cost_in_credits) ? 0 : parseInt(data.cost_in_credits)
+            const cost = formatStringToInt(data.cost_in_credits)
             apiData.starships[starshipId] = { cost, name, id: starshipId }
             setApiData({...apiData})
           })

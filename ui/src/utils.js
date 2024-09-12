@@ -24,4 +24,12 @@ function calculateSpending(data) {
     return costPerStarship
 }
 
-export { calculateSpending };
+function formatStringToInt(number) {
+    /*
+      Take a string and convert to int
+      If input is not a string, then return 0 by default
+    */
+    return isNaN(number) ? 0 : parseInt(number)
+  }
+
+export { calculateSpending, formatStringToInt };
