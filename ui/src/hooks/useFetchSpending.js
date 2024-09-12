@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 
 export const validPassword = new RegExp('^(?=.*?[A-Za-z])(?=.*?[0-9]).{6,}$');
 
-const cleanUrl = (url, resource) => url.replace(`https://swapi.dev/api/${resource}/`,"").replace("/", "")
-
 const useFetchSpending = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [apiData, setApiData] = useState({films: [], starships: []});
